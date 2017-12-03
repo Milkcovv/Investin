@@ -1,0 +1,20 @@
+[
+  {
+    "username": "girl",
+    "firstname":"John",
+    "lastname": "Doe",
+    "email": "girl@example.com",
+    "admin": true,
+    "password": "girl",
+    "thumbnail": "img/girl-thumb.png",
+    "avatar": "img/girl-avatar.jpg"
+  },
+  {
+    "username": "boy",
+    "email": "boy@example.com",
+    "admin": true,
+    "password": "boy",
+    "thumbnail": "img/boy-thumb.png",
+    "avatar": "img/boy-avatar.jpg"
+  }
+]

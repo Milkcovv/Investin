@@ -1,0 +1,21 @@
+header(class='menu menu-horizontal menu-top menu-thin dark-theme affix')
+	.container
+		ul.nav-left
+				li: a(href="/") Home
+		ul.nav-right
+			if (admin)
+				if (user.userType=="INVESTOR")
+					li: a(href="/users" class="button button-default  button-pill button-light-o") Show Users
+				li.dropdown
+					a(id="dLabel" class="dropdown-toggle" data-toggle="dropdown" href="#") 
+						img(src= user.avatar class="menu-avatar")
+						span(class="fa fa-chevron-down")
+					ul.dropdown-menu.light-theme
+						li.dropdown-header= user.firstname +' ' +user.lastname
+						li(role="separator" class="divider")
+						li: a(href="/" + user.username) My Profile
+						li: a(href="/dashboard") Settings
+						li: a(href="/logout") Log out
+
+			else
+				li: a(class="button button-default button-sm button-light-o", href="/login") Log in

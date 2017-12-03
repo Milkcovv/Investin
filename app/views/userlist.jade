@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	include includes/header
+	.page-header.text-center.bg.user-img.dark-theme
+		.container
+	.section.light-theme
+		.container
+			.row
+				h1(style ="text-align:center").light USERS <hr>
+					each item in users
+						if (item.userType =='BUSINESS OWNER' || item.profilePermission == true)
+							.col-sm-6.col-md-4
+								div
+									a(href= '/' + item.username)
+										img(src='img/users/'+item.firstname+'_profile.jpg' class="thumb")
+									.caption.text-center
+										h3= item.firstname +' ' +item.lastname
+										if(item.userType =='INVESTOR')
+											h4(style="color:blue;")= item.userType
+										else
+											h4(style="color:green;")= item.userType
+									

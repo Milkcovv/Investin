@@ -1,0 +1,36 @@
+extends layout
+
+block content
+	- var menu = 'index'
+	include includes/header
+	section.section.text-center.bg.hero-bg.home-img
+		.container.text-center
+			div.col-sm-10.col-sm-offset-1
+				h1.thin= appTitle
+				p.description A platform where business owners meets investors
+			if(!admin)
+				.wrap
+					.pricing-grids
+						.pricing-grid2
+							.price-value.two
+								h3
+									a(href='#') Membership
+								h5
+									span $ 9.99 / month
+								
+							.price-bg
+								ul
+									
+									li
+										a(href='#') Advertise your business with a click
+									li.whyt
+										a(href='#') Browse thousands of businesses
+									li
+										a(href='#') Sercure and safe environment
+									li.whyt
+										a(href='#') Make a sound investment
+								.cart2
+									a(class="button button-default button-sm button-light-o", href="/signup") Sign up
+
+
+

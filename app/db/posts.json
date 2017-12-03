@@ -1,0 +1,50 @@
+[
+	{
+		"text": "This is an example photo post",
+		"author": {"username": "admin", "avatar": "img/girl-avatar.jpg"},
+		"media": "photo",
+		"created_at": new Date("2015-10-25T09:45:00.000-0000")
+	},
+	{
+		"text": "This is an example text post",
+		"author": {"username": "admin", "avatar": "img/girl-avatar.jpg"},
+		"media": "text",
+		"created_at": new Date("2015-10-25T09:30:00.000-0000")
+	},
+	{
+		"text": "This is an example video post",
+		"author": {"username": "admin", "avatar": "img/girl-avatar.jpg"},
+		"media": "photo",
+		"created_at": new Date("2015-10-25T09:15:00.000-0000")
+	},
+	{
+		"text": "This is an example text post",
+		"author": {"username": "admin", "avatar": "img/girl-avatar.jpg"},
+		"media": "text",
+		"created_at": new Date("2015-10-25T09:00:00.000-0000")
+	},
+	{
+		"text": "This is an example photo post",
+		"author": {"username": "admin", "avatar": "img/girl-avatar.jpg"},
+		"media": "video",
+		"created_at": new Date("2015-10-25T08:45:00.000-0000")
+	},
+	{
+		"text": "This is an example video post",
+		"author": {"username": "admin", "avatar": "img/girl-avatar.jpg"},
+		"media": "video",
+		"created_at": new Date("2015-10-25T08:30:00.000-0000")
+	},
+	{
+		"text": "This is an example photo post",
+		"author": {"username": "admin", "avatar": "img/girl-avatar.jpg"},
+		"media": "photo",
+		"created_at": new Date("2015-10-25T08:15:00.000-0000")
+	},
+	{
+		"text": "This is an example video post",
+		"author": {"username": "admin", "avatar": "img/girl-avatar.jpg"},
+		"media": "video",
+		"created_at": new Date("2015-10-25T08:00:00.000-0000")
+	}
+]

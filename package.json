@@ -1,0 +1,36 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": "https://github.com/albertaw/social-network-template",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "errorhandler": "^1.4.2",
+    "everyauth": "^0.4.9",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.5",
+    "mongodb": "^2.0.45",
+    "mongoose": "^4.1.10",
+    "mongoskin": "^2.0.0",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0",
+    "stylus": "^0.52.4",
+    "validator": "^4.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "expect": "^1.11.1",
+    "mocha": "^2.3.3",
+    "superagent": "^1.4.0"
+  }
+}

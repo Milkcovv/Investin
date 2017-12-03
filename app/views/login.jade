@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  include includes/header
+  section.section.text-center.bg.hero-bg.ash-gradient.dark-theme
+    .container
+      .form
+        a(href="/"): h2.menu-logo.thin InvestIN
+        form(method="POST", action="/login" class="light-theme")
+          .container-fluid
+            .form-header
+              p.lead Log in to your account
+              p= error
+            .form-group
+              input(type="text", name="username", placeholder="Username")
+            .form-group
+              input(type="password", name="password", placeholder="Password")
+            .form-group
+              input(type="submit", value="submit", name="submit", class="button button-default button-pill button-dark btn-block")
+      // SIGNUP
+      p New?&nbsp;&nbsp;
+        a(href="/signup", class="button button-default button-pill button-light-o") Sign up

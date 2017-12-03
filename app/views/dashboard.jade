@@ -1,0 +1,56 @@
+extends layout
+
+block content
+	include includes/header
+	.section.settings.light-theme
+		.container
+			form(method="POST", action="/" + user.username, class="form")
+				h2 Profile Settings
+				.settings-section
+					h4 Picture
+					img(src='img/users/'+user.firstname +'_profile.jpg',class="thumb")
+					input(type="file", name="image")
+
+				// ACCOUNT SETTINGS
+				.settings-section
+					h4 Account
+					.form-group
+						label Username
+						input(type="text", name="username", placeholder=user.username)
+					.form-group
+						label About me
+						textarea(name="description", rows = 6, cols = 10)= user.bio
+					if (user.userType =='INVESTOR')
+						.form-group
+							label Position
+							textarea(name="position", rows = 6, cols = 10)= user.position
+						.form-group
+							label Publication
+							textarea(name="publication", rows = 6, cols = 10)= user.publication
+						.form-group
+							label Linkedin 
+							input(type="text", name="linkedin", placeholder=user.linkedin)
+						.form-group
+							label Homepage 
+							input(type="text", name="homepage", placeholder=user.homepage)
+					else
+						.form-group
+							label Supporting documents
+							input(type="file", name="image")
+							input(type="file", name="image")
+					.form-group
+						label Email
+						input(type="text", name="email", placeholder=user.email)
+					if(user.userType =='INVESTOR')
+						.form-group
+							input(type="radio" name="permissionType" value='false' checked)
+							| Private
+							input(type="radio", name="permissionType", value ='true')
+							| Public
+					.form-group
+						input(type="submit", value="Update Profile", name="submit", class="button button-default button-dark save")
+					
+				
+
+
+

@@ -1,0 +1,69 @@
+extends layout
+
+block content
+	include includes/header
+	.text-center
+		.container
+			br
+			br
+			br
+			br
+			img(src='img/users/' +profile.firstname +'_profile.jpg' , class='thumb')
+			br
+			br
+			h2.light= profile.firstname + ' ' + profile.lastname 
+			if(profile.userType =='INVESTOR')
+				h3(style="color:blue;")= profile.userType
+			else
+				h3(style="color:green;")= profile.userType
+
+			if (profile.userType == 'INVESTOR')
+				.col-md-4
+					a(href="mailto:"+profile.email)
+						img(src="img/gmail-logo.png" width="150px" height="90px")
+					p Email me!
+				.col-md-4
+					if (profile.userType == 'INVESTOR')
+						a(href=profile.homepage)
+							img(src="img/homepage.png" width="200px" height="90px")
+						p Check out my personal page
+				.col-md-4
+					if (profile.userType == 'INVESTOR')
+						a(href=profile.linkedin)
+							img(src="img/linkedin-logo.jpg" width="170px" height="90px")
+						p Check out my LinkedIN page
+			else
+				.col-md-12
+					a(href="mailto:"+profile.email)
+						img(src="img/gmail-logo.png" width="150px" height="90px")
+					p Email me!
+			
+		hr
+		.container
+			p(style ='font-size:40px; font-weight:bold; text-align :center') About me
+			p= profile.bio
+			if (profile.userType == 'INVESTOR')
+				hr
+				p(style ='font-size:40px; font-weight:bold; text-align :center') Positions
+				br
+				p= profile.position
+				hr
+				p(style ='font-size:40px; font-weight:bold; text-align :center') Publication
+				.row
+					p(style="font-style:italic;")= profile.publication
+					if(profile.firstname =='Kevin')
+						img(src='img/users/kevin_book.jpg')
+						br
+						br
+					
+			else
+				hr
+				p(style ='font-size:40px; font-weight:bold; text-align :center') Financial Documents
+				br
+				img(src='img/users/' +profile.firstname +'_income.jpg',width='100%', height='100%')
+				hr
+				img(src='img/users/' +profile.firstname +'_graph.jpg',width='100%', height='100%')
+
+			
+
+
